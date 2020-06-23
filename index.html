@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beatmaker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__image">
+        <svg
+          fill="#fff"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="70px"
+          height="70px"
+          viewBox="0 0 394.751 394.751"
+        >
+          <g>
+            <path
+              d="M197.38,0C88.548,0,0.004,88.536,0.004,197.377c0,108.834,88.536,197.374,197.376,197.374
+		c108.836,0,197.367-88.548,197.367-197.374C394.747,88.548,306.207,0,197.38,0z M17.863,225.377c-1.421-9.133-2.158-18.49-2.158-28
+		C15.705,97.198,97.2,15.701,197.38,15.701c8.093,0,16.056,0.591,23.878,1.617l-13.815,20.366
+		c-3.342-0.207-6.674-0.505-10.062-0.505c-88.332,0-160.197,71.865-160.197,160.199c0,4.408,0.307,8.757,0.66,13.08L17.863,225.377z
+		 M45.402,204.792c-0.123-2.477-0.377-4.913-0.377-7.414c0-84.003,68.347-152.348,152.346-152.348c1.666,0,3.274,0.199,4.923,0.252
+		l-17.871,26.353c-59.637,6.091-107.11,53.838-112.831,113.588L45.402,204.792z M178.437,80.489l-34.203,50.458l-63.762,47.65
+		C88.518,128.332,128.188,88.616,178.437,80.489z M197.38,264.093c-36.844,0-66.72-29.875-66.72-66.716
+		c0-36.842,29.875-66.723,66.72-66.723c36.842,0,66.718,29.881,66.718,66.723C264.098,234.218,234.222,264.093,197.38,264.093z"
+            />
+            <path
+              d="M231.981,197.377c0,19.084-15.524,34.608-34.602,34.608c-4.342,0-7.851,3.503-7.851,7.851c0,4.34,3.508,7.851,7.851,7.851
+		c27.733,0,50.303-22.569,50.303-50.31c0-4.342-3.502-7.852-7.851-7.852C235.492,189.525,231.981,193.036,231.981,197.377z"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__title">Tap music</h1>
+        <b class="header__slogan">Create sounds with just one tap</b>
+      </header>
+
+      <div class="bubble-wrap"></div>
+
+      <section class="pads">
+        <h2 class="pads__title">Sounds</h2>
+        <div
+          class="pads__wrap"
+          data-color="#F43BA4"
+          aria-label="Bubbles"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/bubbles.mp3" />
+          </audio>
+        </div>
+
+        <div
+          class="pads__wrap"
+          data-color="#00FF00"
+          aria-label="Clay"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/clay.mp3" />
+          </audio>
+        </div>
+
+        <div
+          class="pads__wrap"
+          data-color="#03a9f4"
+          aria-label="Confetti"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/confetti.mp3" />
+          </audio>
+        </div>
+
+        <div
+          class="pads__wrap"
+          data-color="#657786"
+          aria-label="Glimmer"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/glimmer.mp3" />
+          </audio>
+        </div>
+
+        <div
+          class="pads__wrap"
+          data-color="#F0FF00"
+          aria-label="Moon"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/moon.mp3" /
+          </audio>
+        </div>
+
+        <div
+          class="pads__wrap"
+          data-color="#FF0000"
+          aria-label="Ufo"
+          tabindex="1"
+        >
+          <audio class="pads__sound">
+            <source src="./sounds/ufo.mp3" />
+          </audio>
+        </div>
+      </section>
+
+      <div class="popup">
+        Press keys from 1 to 6 to create song!
+      </div>
+    </div>
+
+    <script>
+      window.onload = () => {
+        document.body.classList.add("preloader_hiding");
+        window.setTimeout(function () {
+          document.body.classList.add("loaded");
+          document.body.classList.remove("loaded_hiding");
+        }, 500);
+      };
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
